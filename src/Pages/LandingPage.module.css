@@ -1,0 +1,29 @@
+.background {
+  height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
+}
+
+.bgImage {
+  background-image: url(../images/stars.png);
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome {
+  text-align: center;
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 119px;
+  color: #fe3b1f;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  padding-top: 7rem;
+}
+
+.rocketman {
+  width: fit-content;
+  display: block;
+  margin: 2rem auto;
+}

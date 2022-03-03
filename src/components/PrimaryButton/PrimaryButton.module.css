@@ -1,0 +1,23 @@
+.button {
+  background: #fe3b1f;
+  border-radius: 50px;
+  border: none;
+  padding: 15px;
+}
+
+.link {
+  text-decoration: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.center {
+  width: 20%;
+  margin: 4rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+}

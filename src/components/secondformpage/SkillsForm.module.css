@@ -1,0 +1,56 @@
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dropdown {
+  width: 50%;
+  padding: 1.4rem;
+  border: 1px solid black;
+  background: none;
+  font-size: x-large;
+  margin-bottom: 1.5rem;
+}
+
+.p {
+  color: black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit {
+  background: #fe3b1f;
+  border: none;
+  width: 35%;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: larger;
+  margin: 0 0 3rem 10rem;
+}
+
+.box {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: larger;
+  line-height: 17px;
+}
+
+.remove {
+  background: none;
+  border: none;
+}

@@ -1,0 +1,14 @@
+.input {
+  padding: 1.4rem 5%;
+  width: 40%;
+  margin: 0 auto 1.5rem auto;
+  font-size: x-large;
+  border: 1px solid black;
+}
+
+.p {
+  color: #fe3b1f;
+  font-size: larger;
+  width: 50%;
+  margin: -1rem auto 2rem auto;
+}

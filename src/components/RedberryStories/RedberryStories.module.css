@@ -1,0 +1,19 @@
+.right {
+  width: 50%;
+  background-color: #151718;
+  height: inherit;
+}
+
+.p {
+  text-align: center;
+  width: 60%;
+  height: fit-content;
+  margin: 11rem auto 4rem auto;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 200%;
+  letter-spacing: 0.05em;
+}

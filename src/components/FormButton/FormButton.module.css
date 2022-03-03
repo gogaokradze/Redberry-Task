@@ -1,0 +1,12 @@
+.button {
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.tracker {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}

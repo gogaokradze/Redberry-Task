@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  width: 50%;
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+h1 {
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  color: #fe3b1f;
+  width: 95%;
+  margin: 5rem auto 7rem auto;
+  text-align: center;
+}
