@@ -9,7 +9,7 @@ import { useForm } from 'react-hook-form'
 
 const Covid = () => {
   const { data, setData, setFormIndex } = useContext(UserContext)
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, watch } = useForm({
     defaultValues: data || {},
   });
   const covidInfo = (submitedData) => {
@@ -17,6 +17,7 @@ const Covid = () => {
     setFormIndex((prevState) => prevState += 1
     )
   }
+  // {document.querySelector('#yes').checked === true && <p>pranked haha</p>}
   return (
     <>
       <div className={classes.left}>
@@ -43,10 +44,12 @@ const Covid = () => {
               <input type="radio" id="no" {...register("had_covid")} value="no" />no
             </label>
           </div>
-          <div>
-            <p>When?</p>
-            <input type="date" {...register('had_covid_at')} />
-          </div>
+          {watch().had_covid === 'yes' && (
+            <div>
+              <p>When?</p>
+              <input type="date" {...register('had_covid_at', { required: true })} />
+            </div>
+          )}
           <div className={classes.radio}>
             <p>Have you been vaccinated?</p>
             <label htmlFor="vaccinated">
@@ -56,15 +59,16 @@ const Covid = () => {
               <input type="radio" id="unvaccinated" {...register("vaccinated")} value="no" />no
             </label>
           </div>
-          <div>
-            <p>When did you get your last covid vaccine?</p>
-            <input type="date" {...register('vaccinated_at')} />
-          </div>
+          {watch().vaccinated === 'yes' && (
+            <div>
+              <p>When did you get your last covid vaccine?</p>
+              <input type="date" {...register('vaccinated_at', { required: true })} />
+            </div>
+          )}
 
           <FormButton />
 
         </form>
-
 
       </div>
     </>

@@ -9,7 +9,7 @@ const PrimaryButton = (props) => {
   return (
     <div className={classes.center}>
       <button className={classes.button}>
-        <Link className={classes.link} to='/questionnaire'>{props.children}</Link>
+        <Link className={classes.link} to={props.to}>{props.children}</Link>
       </button>
     </div>
 

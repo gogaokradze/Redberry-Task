@@ -27,10 +27,7 @@ const FormButton = (props) => {
       {props.next ? (
         <button className={classes.button} onClick={() => {
           if (data.skills.length > 0) {
-
             setFormIndex((prevState) => prevState += 1)
-          } else {
-            alert('Select at least one Skill!')
           }
         }
         }>

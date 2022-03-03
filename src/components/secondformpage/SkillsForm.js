@@ -10,7 +10,7 @@ import { useForm } from 'react-hook-form'
 
 const SkillsForm = () => {
   const [skills, setSkills] = useState()
-  const { data, setData, setFormIndex } = useContext(UserContext)
+  const { data, setData } = useContext(UserContext)
   const { register, handleSubmit } = useForm({
     defaultValues: data || {},
   });
@@ -22,8 +22,9 @@ const SkillsForm = () => {
   }, [])
 
   const add = (submitData) => {
-    setData({ ...data, skills: [...data?.skills, { id: submitData.id, experience: submitData.experience }] })
-
+    if (!data.skills.find((object) => object.id === submitData.id)) {
+      setData({ ...data, skills: [...data?.skills, { id: submitData.id, experience: submitData.experience }] })
+    }
   }
 
   return (

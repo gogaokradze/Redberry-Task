@@ -13,7 +13,7 @@ const LandingPage = () => {
       <div className={classes.bgImage}>
         <h1 className={classes.welcome}>Welcome Rocketeer !</h1>
 
-        <PrimaryButton >Start Questionnaire</PrimaryButton>
+        <PrimaryButton to={'/questionnaire'} >Start Questionnaire</PrimaryButton>
 
         <SecondaryButton>Submitted Applications</SecondaryButton>
 
