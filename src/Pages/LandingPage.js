@@ -11,14 +11,15 @@ const LandingPage = () => {
   return (
     <main className={classes.background}>
       <div className={classes.bgImage}>
-        <h1 className={classes.welcome}>Welcome Rocketeer !</h1>
+        <div className={classes.center}>
+          <h1 className={classes.welcome}>Welcome Rocketeer !</h1>
+          <PrimaryButton to={'/questionnaire'} >Start Questionnaire</PrimaryButton>
+          <SecondaryButton to={'/Submitted-Applications'}>Submitted Applications</SecondaryButton>
+        </div>
 
-        <PrimaryButton to={'/questionnaire'} >Start Questionnaire</PrimaryButton>
-
-        <SecondaryButton>Submitted Applications</SecondaryButton>
-
-        <img src={rocketman} alt='rocketman' className={classes.rocketman} />
-
+        <div className={classes.img}>
+          <img src={rocketman} alt='rocketman' className={classes.rocketman} />
+        </div>
       </div>
     </main>
   )

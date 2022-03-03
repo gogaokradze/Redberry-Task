@@ -9,8 +9,8 @@ import {
 const SecondaryButton = (props) => {
   return (
     <div className={classes.center}>
-      <button className={classes.button} >
-        <Link className={classes.link} to='/Submitted-Applications'>{props.children}</Link>
+      <button className={classes.button} onClick={props.onClick}>
+        <Link className={classes.link} to={props.to}>{props.children}</Link>
       </button>
     </div>
   )

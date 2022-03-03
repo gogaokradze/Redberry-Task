@@ -16,8 +16,8 @@ export const Previous = () => (
   </svg>
 )
 
-export const Circle = () => (
+export const Circle = (props) => (
   <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle opacity="0.1" cx="9.5" cy="9.5" r="9.5" fill="#FE3B1F" />
+    <circle style={{ opacity: props.opacity ? 0.9 : 0.1 }} cx="9.5" cy="9.5" r="9.5" fill="#FE3B1F" />
   </svg>
 )

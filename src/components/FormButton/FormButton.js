@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 
 
 const FormButton = (props) => {
-  const { setFormIndex, data } = useContext(UserContext)
+  const { setFormIndex, data, formIndex } = useContext(UserContext)
+  console.log(formIndex)
   return (
     <div className={classes.tracker}>
       {props.previous ? (
@@ -19,11 +20,11 @@ const FormButton = (props) => {
         </button>
       )}
 
-      <Circle />
-      <Circle />
-      <Circle />
-      <Circle />
-      <Circle />
+      <Circle opacity={formIndex >= 0} />
+      <Circle opacity={formIndex >= 1} />
+      <Circle opacity={formIndex >= 2} />
+      <Circle opacity={formIndex >= 3} />
+      <Circle opacity={formIndex >= 4} />
       {props.next ? (
         <button className={classes.button} onClick={() => {
           if (data.skills.length > 0) {

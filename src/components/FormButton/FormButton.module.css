@@ -8,5 +8,9 @@
   display: flex;
   width: 30%;
   justify-content: space-evenly;
-  margin: 0 auto;
+  margin: 4rem auto;
+}
+
+.circle {
+  opacity: 0.1;
 }

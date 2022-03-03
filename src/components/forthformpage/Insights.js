@@ -27,19 +27,19 @@ const Insights = () => {
         <div className={classes.radio}>
           <p>Would you attend Devtalks and maybe also organize your own?</p>
           <label htmlFor="1">
-            <input type="radio" id="1" {...register("will_organize_devtalk")} value={true} />Yes
+            <input type="radio" id="1" {...register("will_organize_devtalk", { required: true })} value={true} />Yes
           </label>
           <label htmlFor="2">
-            <input type="radio" id="2" {...register("will_organize_devtalk")} value={false} />no
+            <input type="radio" id="2" {...register("will_organize_devtalk", { required: true })} value={false} />no
           </label>
         </div>
         <div>
           <p>What would you speak about at Devtalk?</p>
-          <textarea {...register("devtalk_topic")} />
+          <textarea {...register("devtalk_topic", { required: true })} />
         </div>
         <div>
           <p>Tell us something special</p>
-          <textarea {...register("something_special")} />
+          <textarea {...register("something_special", { required: true })} />
         </div>
         <FormButton />
       </form>
