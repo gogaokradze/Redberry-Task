@@ -3,18 +3,18 @@ import classes from './LandingPage.module.css'
 
 import rocketman from '../images/rocketman.png'
 
+import { Link } from "react-router-dom";
 
-import PrimaryButton from '../components/PrimaryButton/PrimaryButton';
-import SecondaryButton from '../components/SecondaryButton/SecondaryButton'
+
 
 const LandingPage = () => {
   return (
     <main className={classes.background}>
       <div className={classes.bgImage}>
+        <h1 className={classes.welcome}>Welcome Rocketeer !</h1>
         <div className={classes.center}>
-          <h1 className={classes.welcome}>Welcome Rocketeer !</h1>
-          <PrimaryButton to={'/questionnaire'} >Start Questionnaire</PrimaryButton>
-          <SecondaryButton to={'/Submitted-Applications'} >Submitted Applications</SecondaryButton>
+          <Link className={classes.start} to='/questionnaire'>Start Questionnaire</Link>
+          <Link className={classes.submitted} to='/Submitted-Applications'>Submitted Applications</Link>
         </div>
 
         <div className={classes.img}>

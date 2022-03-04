@@ -38,7 +38,9 @@ const SkillsForm = () => {
           ))}
         </select>
         <Input register={register} name='experience' validation={{ required: true }} placeholder={'Experience Duration in Years'} />
-        <input className={classes.submit} type="submit"></input>
+        <div className={classes.center}>
+          <input className={classes.submit} type="submit" value="Add programming language" />
+        </div>
         {skills && data?.skills.map(({ id, experience }, index) => {
           return (
             <div key={index} className={classes.box}>

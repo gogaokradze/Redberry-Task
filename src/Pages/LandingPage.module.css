@@ -26,8 +26,9 @@
 }
 
 .rocketman {
-  width: 500px;
-  height: 500px;
+  pointer-events: none;
+  width: 409.92px;
+  height: 372.45px;
 }
 
 .img {
@@ -37,4 +38,27 @@
 
 .center {
   margin-bottom: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.start {
+  background: #fe3b1f;
+  border-radius: 50px;
+  border: none;
+  padding: 1.8rem 3rem;
+  font-size: 24px;
+  text-decoration: none;
+  color: #ffffff;
+  width: fit-content;
+  margin: auto;
+}
+
+.submitted {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 29px;
+  text-decoration: underline;
+  margin-top: 2rem;
 }

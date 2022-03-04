@@ -2,6 +2,29 @@
   height: 100vh;
   background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.link {
+  background: #fe3b1f;
+  border-radius: 50px;
+  border: none;
+  padding: 1.3rem 9rem;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 44px;
+  text-decoration: none;
+  margin-bottom: 1.7rem;
+}
+
+.back {
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 34px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 1.7rem;
+  text-decoration: underline;
 }

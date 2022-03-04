@@ -9,6 +9,7 @@
   width: 30%;
   justify-content: space-evenly;
   margin: 4rem auto;
+  align-items: center;
 }
 
 .circle {

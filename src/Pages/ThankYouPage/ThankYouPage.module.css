@@ -1,0 +1,13 @@
+.background {
+  background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.thanks {
+  font-size: 96px;
+  line-height: 119px;
+  font-style: normal;
+}
