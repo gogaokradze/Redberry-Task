@@ -10,6 +10,8 @@ import { UserContext } from './UserContext'
 
 import LandingPage from "./Pages/LandingPage";
 import QuestionnairePage from "./Pages/QuestionnairePage";
+import ThankYouPage from "./Pages/ThankYouPage/ThankYouPage";
+import SubmittedAppsPage from "./Pages/SubmittedAppsPage/SubmittedAppsPage";
 
 function App () {
   const [data, setData] = useState({ skills: [] })
@@ -19,8 +21,11 @@ function App () {
     <UserContext.Provider value={{ data, setData, formIndex, setFormIndex }}>
       <Router>
         <Switch>
+          <Route path="/Thank-You">
+            <ThankYouPage />
+          </Route>
           <Route path="/Submitted-Applications">
-            Submitted-Applications
+            <SubmittedAppsPage />
           </Route>
           <Route path="/questionnaire">
             <QuestionnairePage />
