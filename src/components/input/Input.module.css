@@ -2,13 +2,18 @@
   padding: 1.4rem 5%;
   width: 40%;
   margin: 0 auto 1.5rem auto;
-  font-size: x-large;
-  border: 1px solid black;
   font-size: 16px;
+  border: 1px solid black;
+}
+
+.input:focus {
+  border: 1px solid #fe3b1f;
+  outline: 0;
 }
 
 .input::placeholder {
   font-style: italic;
+  color: #454545;
 }
 
 .p {
