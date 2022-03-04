@@ -5,10 +5,10 @@
 }
 
 .p {
-  text-align: center;
+  text-align: start;
   width: 60%;
   height: fit-content;
-  margin: 11rem auto 4rem auto;
+  margin: 8rem auto 4rem auto;
   color: #ffffff;
   font-family: Montserrat;
   font-style: normal;

@@ -24,27 +24,27 @@ const Insights = () => {
     <div className={classes.left}>
       <h1>What about you?</h1>
       <form onSubmit={handleSubmit(insights)} className={classes.form}>
-        <div className={classes.radio}>
-          <p>Would you attend Devtalks and maybe also organize your own?</p>
-          <label htmlFor="1">
+        <div className={`${classes.div} ${classes.radio}`}>
+          <p className={classes.p} >Would you attend Devtalks and maybe also organize your own?</p>
+          <label className={classes.label} htmlFor="1">
             <input type="radio" id="1" {...register("will_organize_devtalk", { required: true })} value={true} />Yes
           </label>
-          <label htmlFor="2">
+          <label className={classes.label1} htmlFor="2">
             <input type="radio" id="2" {...register("will_organize_devtalk", { required: true })} value={false} />no
           </label>
         </div>
-        <div>
-          <p>What would you speak about at Devtalk?</p>
+        <div className={classes.div}>
+          <p className={classes.devtalk}>What would you speak about at Devtalk?</p>
           <textarea {...register("devtalk_topic", { required: true })} />
         </div>
-        <div>
-          <p>Tell us something special</p>
+        <div className={classes.div}>
+          <p className={classes.devtalk}>Tell us something special</p>
           <textarea {...register("something_special", { required: true })} />
         </div>
         <FormButton />
-      </form>
+      </form >
 
-    </div>
+    </div >
   )
 }
 

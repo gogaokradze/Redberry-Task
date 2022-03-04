@@ -1,6 +1,7 @@
 .left {
   width: 50%;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
 }
@@ -9,28 +10,38 @@
   font-size: 1.5rem;
 }
 
+.div {
+  width: 80%;
+  margin: auto;
+}
+
 .radio {
   display: flex;
   flex-direction: column;
 }
 
 .radio input {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   margin-right: 10px;
 }
 
-.radio p {
-  font-size: 28px;
-  margin-top: 4rem;
+.devtalk {
+  font-size: 24px;
+  margin-top: 3rem;
 }
 
-.radio label {
-  margin-top: 2rem;
+.radio p {
   font-size: 24px;
 }
 
+.label1 {
+  margin-top: 1rem;
+  font-size: 22px;
+}
+
 .form {
+  width: 100%;
   font-family: Montserrat;
   font-size: 28px;
   font-style: normal;
@@ -40,7 +51,15 @@
   text-align: left;
 }
 
+.label {
+  margin-top: 0;
+  font-size: 22px;
+}
+
 .form textarea {
-  width: 60%;
-  height: 10rem;
+  width: 80%;
+  height: 7rem;
+}
+.p {
+  margin-top: 0;
 }

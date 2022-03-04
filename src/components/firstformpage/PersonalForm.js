@@ -26,7 +26,7 @@ const PersonalForm = () => {
         <Input register={register} name='firstName' validation={{ required: { value: true, message: 'first name is required' }, minLength: { value: 2, message: 'first name should include 2 or more characters' } }} errors={errors} placeholder={'First Name'} />
         <Input register={register} name='lastName' validation={{ required: { value: true, message: 'last name is required' }, minLength: { value: 2, message: 'last name should include 2 or more characters' } }} errors={errors} placeholder={'Last Name'} />
         <Input register={register} name='email' validation={{ required: { value: true, message: 'email is required' }, pattern: { value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, message: 'enter valid email' } }} placeholder={'E-Mail'} errors={errors} />
-        <Input register={register} name='phoneNumber' placeholder={'+995 5_ _ _ _'} errors={errors} />
+        <Input register={register} name='phoneNumber' validation={{ pattern: { value: /[+]\s?[9][9][5]\s?[5]\d{2}\s?\d\d\s?\d\s?\d\s?\d\d$/, message: 'enter georgian phone number' } }} placeholder={'+995 5_ _ _ _'} errors={errors} />
         <FormButton previous={true} />
       </form>
     </div>

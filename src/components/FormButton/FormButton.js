@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 const FormButton = (props) => {
   const { setFormIndex, data, formIndex } = useContext(UserContext)
-  console.log(formIndex)
   return (
     <div className={classes.tracker}>
       {props.previous ? (
