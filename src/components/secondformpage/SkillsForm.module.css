@@ -6,16 +6,17 @@
 }
 
 .dropdown {
-  width: 50%;
-  padding: 1.4rem;
+  color: #454545;
+  width: 455px;
+  height: 54px;
+  padding-left: 57px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 1px solid #525557;
   background: none;
   font-size: 14px;
-  margin-bottom: 1.5rem;
-}
-
-.p {
-  color: black;
+  margin-bottom: 1rem;
 }
 
 .form {
@@ -24,8 +25,19 @@
   justify-content: center;
   align-items: center;
 }
+
+.vector {
+  position: relative;
+  left: 420px;
+  bottom: 50px;
+  pointer-events: none;
+}
+.vectordiv {
+  display: flex;
+  flex-direction: column;
+}
 .center {
-  width: 50%;
+  width: 455px;
   display: flex;
   justify-content: flex-end;
 }
@@ -33,26 +45,43 @@
 .submit {
   background: #fe3b1f;
   border: none;
-  width: 50%;
-  padding: 1rem;
+  width: 201px;
+  height: 32px;
+  box-sizing: border-box;
+  padding: 8px 4px;
   color: #ffffff;
   font-size: 12px;
   margin: 0 0 3rem 10rem;
 }
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.number[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
 
 .box {
   display: flex;
-  width: 50%;
-  justify-content: space-around;
+  width: 447px;
+  height: 48px;
+  box-sizing: border-box;
+  padding-left: 17px;
+  padding-top: 14px;
+  padding-bottom: 10px;
   align-items: center;
-  border: 1px solid black;
   margin-top: 1rem;
-  padding: 0.5rem 0;
+  border: 1px solid #525557;
   font-family: Montserrat;
   font-style: italic;
   font-weight: normal;
-  font-size: larger;
+  font-size: 14px;
   line-height: 17px;
+}
+
+.years {
+  padding-left: 35px;
+  padding-right: 171px;
 }
 
 .remove {

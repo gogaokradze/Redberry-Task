@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 
 const LandingPage = () => {
+
   return (
     <main className={classes.background}>
       <div className={classes.bgImage}>

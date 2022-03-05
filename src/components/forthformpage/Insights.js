@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import classes from './Insights.module.css'
 import FormButton from '../FormButton/FormButton'
 
@@ -10,7 +10,7 @@ import { useForm } from 'react-hook-form'
 
 const Insights = () => {
   const { data, setData, setFormIndex } = useContext(UserContext)
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, formState: { errors }, getValues } = useForm({
     defaultValues: data || {},
   });
 
@@ -19,6 +19,13 @@ const Insights = () => {
     setFormIndex((prevState) => prevState += 1
     )
   }
+
+  useEffect(() => {
+    return () => {
+      setData({ ...data, will_organize_devtalk: getValues().will_organize_devtalk, devtalk_topic: getValues().devtalk_topic, something_special: getValues().something_special })
+    }
+  }, [])
+
 
   return (
     <div className={classes.left}>
@@ -35,12 +42,13 @@ const Insights = () => {
         </div>
         <div className={classes.div}>
           <p className={classes.devtalk}>What would you speak about at Devtalk?</p>
-          <textarea {...register("devtalk_topic", { required: true })} />
+          <textarea className={classes.textarea1} {...register("devtalk_topic", { required: true })} placeholder="I would..." />
         </div>
         <div className={classes.div}>
           <p className={classes.devtalk}>Tell us something special</p>
-          <textarea {...register("something_special", { required: true })} />
+          <textarea className={classes.textarea2} {...register("something_special", { required: true })} placeholder="I..." />
         </div>
+        {Object.keys(errors).length > 0 && (<div className={classes.div}><p className={classes.errorMessage}>`*please fill out the form</p></div>)}
         <FormButton />
       </form >
 

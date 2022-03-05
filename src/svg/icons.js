@@ -27,3 +27,9 @@ export const Calendar = (props) => (
     <path d="M1 7H17M13 1V3M5 1V3M2 3H16C16.5523 3 17 3.44772 17 4V18C17 18.5523 16.5523 19 16 19H2C1.44772 19 1 18.5523 1 18V4C1 3.44772 1.44772 3 2 3ZM13 15H13.002V15.002H13V15ZM9 15H9.002V15.002H9V15ZM5 15H5.002V15.002H5V15ZM13 11H13.002V11.002H13V11ZM9 11H9.002V11.002H9V11ZM5 11H5.002V11.002H5V11Z" stroke="#FE3B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )
+
+export const Vector = (props) => (
+  <svg className={props.className} width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.01 7.425L12.02 1.415L10.607 0L6.01 4.6L1.414 0L0 1.414L6.01 7.425Z" fill="#FE3B1F" />
+  </svg>
+)

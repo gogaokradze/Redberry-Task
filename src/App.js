@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   BrowserRouter as Router,
@@ -13,9 +13,15 @@ import QuestionnairePage from "./Pages/QuestionnairePage";
 import ThankYouPage from "./Pages/ThankYouPage/ThankYouPage";
 import SubmittedAppsPage from "./Pages/SubmittedAppsPage/SubmittedAppsPage";
 
+const initialData = JSON.parse(localStorage.getItem('data') || '{}')
+
 function App () {
-  const [data, setData] = useState({ skills: [] })
+  const [data, setData] = useState({ skills: [], ...initialData })
   const [formIndex, setFormIndex] = useState(0)
+
+  useEffect(() => {
+    localStorage.setItem('data', JSON.stringify(data))
+  }, [data])
 
   return (
     <UserContext.Provider value={{ data, setData, formIndex, setFormIndex }}>

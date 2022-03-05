@@ -21,45 +21,70 @@
 }
 
 .radio input {
-  width: 22px;
-  height: 22px;
+  width: 12px;
+  height: 12px;
   margin-right: 10px;
 }
 
 .devtalk {
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 22px;
   margin-top: 3rem;
-}
-
-.radio p {
-  font-size: 24px;
 }
 
 .label1 {
   margin-top: 1rem;
-  font-size: 22px;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .form {
   width: 100%;
   font-family: Montserrat;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
 }
 
 .label {
   margin-top: 0;
-  font-size: 22px;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .form textarea {
-  width: 80%;
-  height: 7rem;
+  background: #ffffff;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  width: 535px;
+  font-size: 13px;
+  line-height: 16px;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-top: 24px;
+}
+.form textarea:focus {
+  border: 1px solid #fe3b1f;
+  outline: 0;
 }
 .p {
   margin-top: 0;
+  font-size: 18px;
+  line-height: 22px;
+}
+.textarea1 {
+  height: 122px;
+}
+
+.textarea2 {
+  height: 89px;
+}
+
+.errorMessage {
+  margin-top: 1.5rem;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #fe3b1f;
 }
