@@ -61,6 +61,7 @@
   box-sizing: border-box;
   padding-left: 24px;
   padding-top: 24px;
+  resize: none;
 }
 .form textarea:focus {
   border: 1px solid #fe3b1f;

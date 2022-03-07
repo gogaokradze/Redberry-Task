@@ -8,10 +8,10 @@ import {
 
 import { UserContext } from './UserContext'
 
-import LandingPage from "./Pages/LandingPage";
-import QuestionnairePage from "./Pages/QuestionnairePage";
-import ThankYouPage from "./Pages/ThankYouPage/ThankYouPage";
-import SubmittedAppsPage from "./Pages/SubmittedAppsPage/SubmittedAppsPage";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import QuestionnairePage from "./pages/QuestionnairePage";
+import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
+import SubmittedAppsPage from "./pages/SubmittedAppsPage/SubmittedAppsPage";
 
 const initialData = JSON.parse(localStorage.getItem('data') || '{}')
 
@@ -27,10 +27,10 @@ function App () {
     <UserContext.Provider value={{ data, setData, formIndex, setFormIndex }}>
       <Router>
         <Switch>
-          <Route path="/Thank-You">
+          <Route path="/thank-you">
             <ThankYouPage />
           </Route>
-          <Route path="/Submitted-Applications">
+          <Route path="/submitted-applications">
             <SubmittedAppsPage />
           </Route>
           <Route path="/questionnaire">

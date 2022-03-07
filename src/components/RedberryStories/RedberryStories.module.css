@@ -17,3 +17,15 @@
   line-height: 48px;
   letter-spacing: 0.05em;
 }
+
+.h1 {
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 79px;
+  color: #fe3b1f;
+  width: 95%;
+  margin: 5rem auto 7rem auto;
+  text-align: center;
+}

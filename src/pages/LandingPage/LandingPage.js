@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './LandingPage.module.css'
 
-import rocketman from '../images/rocketman.png'
+import rocketman from '../../images/rocketman.png'
 
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const LandingPage = () => {
         <h1 className={classes.welcome}>Welcome Rocketeer !</h1>
         <div className={classes.center}>
           <Link className={classes.start} to='/questionnaire'>Start Questionnaire</Link>
-          <Link className={classes.submitted} to='/Submitted-Applications'>Submitted Applications</Link>
+          <Link className={classes.submitted} to='/submitted-applications'>Submitted Applications</Link>
         </div>
 
         <div className={classes.img}>

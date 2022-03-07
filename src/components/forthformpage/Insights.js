@@ -10,7 +10,7 @@ import { useForm } from 'react-hook-form'
 
 const Insights = () => {
   const { data, setData, setFormIndex } = useContext(UserContext)
-  const { register, handleSubmit, formState: { errors }, getValues } = useForm({
+  const { register, handleSubmit, formState: { errors }, getValues, watch } = useForm({
     defaultValues: data || {},
   });
 
@@ -40,10 +40,12 @@ const Insights = () => {
             <input type="radio" id="2" {...register("will_organize_devtalk", { required: true })} value={false} />no
           </label>
         </div>
-        <div className={classes.div}>
-          <p className={classes.devtalk}>What would you speak about at Devtalk?</p>
-          <textarea className={classes.textarea1} {...register("devtalk_topic", { required: true })} placeholder="I would..." />
-        </div>
+        {watch().will_organize_devtalk === 'true' && (
+          <div className={classes.div}>
+            <p className={classes.devtalk}>What would you speak about at Devtalk?</p>
+            <textarea className={classes.textarea1} {...register("devtalk_topic", { required: true })} placeholder="I would..." />
+          </div>
+        )}
         <div className={classes.div}>
           <p className={classes.devtalk}>Tell us something special</p>
           <textarea className={classes.textarea2} {...register("something_special", { required: true })} placeholder="I..." />

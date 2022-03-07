@@ -4,7 +4,7 @@
 }
 
 .bgImage {
-  background-image: url(../images/stars.png);
+  background-image: url(../../images/stars.png);
   width: 100vw;
   height: inherit;
   display: flex;
