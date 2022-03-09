@@ -3,20 +3,17 @@ import { UserContext } from '../../UserContext'
 import classes from './ThankYouPage.module.css'
 import { useHistory } from 'react-router-dom'
 
-
-
 const ThankYouPage = () => {
   const { setData, setFormIndex } = useContext(UserContext)
-  let history = useHistory();
+  let history = useHistory()
 
   useEffect(() => {
-
     setTimeout(() => {
       setData({ skills: [] })
       setFormIndex(0)
       localStorage.removeItem('data')
       history.push('/')
-    }, 3000);
+    }, 3000)
   }, [])
 
   return (
