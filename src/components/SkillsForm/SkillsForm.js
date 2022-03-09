@@ -14,23 +14,14 @@ const SkillsForm = () => {
     defaultValues: data || {},
   })
   const componentMounted = useRef(true)
-  const forward = useRef(null)
-  const backward = useRef(null)
-
-  const keypress = e => {
-    if (e.keyCode === 39) forward.current.click()
-    if (e.keyCode === 37) backward.current.click()
-  }
 
   useEffect(() => {
     fetch('https://bootcamp-2022.devtest.ge/api/skills')
       .then(response => response.json())
       .then(data => setSkills(data))
-    window.addEventListener('keydown', keypress)
 
     return () => {
       componentMounted.current = false
-      window.removeEventListener('keydown', keypress)
     }
   }, [])
 
@@ -106,7 +97,7 @@ const SkillsForm = () => {
               )
             })}
         </div>
-        <FormButton next={true} forwardref={forward} backwardref={backward} />
+        <FormButton next={true} />
       </form>
     </div>
   )

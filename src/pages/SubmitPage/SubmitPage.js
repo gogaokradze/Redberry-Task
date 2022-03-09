@@ -24,7 +24,7 @@ const SubmitPage = () => {
     })
     .split('/')
   let sendData = {
-    token: 'fdbdd790-3af5-4a87-be88-b30ad3d987be',
+    token: '004599cc-9364-4ff9-bb87-48a276728275',
     first_name: data.firstName,
     last_name: data.lastName,
     email: data.email,

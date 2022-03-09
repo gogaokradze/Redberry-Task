@@ -7,7 +7,7 @@ const SubmittedAppsPage = () => {
   const [skills, setSkills] = useState()
   useEffect(() => {
     fetch(
-      'https://bootcamp-2022.devtest.ge/api/applications?token=fdbdd790-3af5-4a87-be88-b30ad3d987be',
+      'https://bootcamp-2022.devtest.ge/api/applications?token=004599cc-9364-4ff9-bb87-48a276728275',
     )
       .then(response => response.json())
       .then(data => setDisplayData(data))

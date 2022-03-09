@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect } from 'react'
 import classes from './PersonalForm.module.css'
 import FormButton from '../FormButton/FormButton'
 import Input from '../Input/Input'
@@ -16,13 +16,6 @@ const PersonalForm = () => {
   } = useForm({
     defaultValues: data || {},
   })
-  const forward = useRef(null)
-  const backward = useRef(null)
-
-  const keypress = e => {
-    if (e.keyCode === 39) forward.current.click()
-    if (e.keyCode === 37) backward.current.click()
-  }
 
   const submit = submitData => {
     setData({
@@ -35,7 +28,6 @@ const PersonalForm = () => {
     setFormIndex(prevState => (prevState += 1))
   }
   useEffect(() => {
-    window.addEventListener('keydown', keypress)
     return () => {
       setData({
         ...data,
@@ -44,7 +36,6 @@ const PersonalForm = () => {
         email: getValues().email,
         phoneNumber: getValues().phoneNumber,
       })
-      window.removeEventListener('keydown', keypress)
     }
   }, [])
 
@@ -105,11 +96,7 @@ const PersonalForm = () => {
             errors={errors}
           />
         </div>
-        <FormButton
-          previous={true}
-          forwardref={forward}
-          backwardref={backward}
-        />
+        <FormButton previous={true} />
       </form>
     </div>
   )

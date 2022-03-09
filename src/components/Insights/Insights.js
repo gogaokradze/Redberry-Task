@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect } from 'react'
 import classes from './Insights.module.css'
 import FormButton from '../FormButton/FormButton'
 
@@ -26,16 +26,8 @@ const Insights = () => {
     })
     setFormIndex(prevState => (prevState += 1))
   }
-  const forward = useRef(null)
-  const backward = useRef(null)
-
-  const keypress = e => {
-    if (e.keyCode === 39) forward.current.click()
-    if (e.keyCode === 37) backward.current.click()
-  }
 
   useEffect(() => {
-    window.addEventListener('keydown', keypress)
     return () => {
       setData({
         ...data,
@@ -43,7 +35,6 @@ const Insights = () => {
         devtalk_topic: getValues().devtalk_topic,
         something_special: getValues().something_special,
       })
-      window.removeEventListener('keydown', keypress)
     }
   }, [])
 
@@ -101,7 +92,7 @@ const Insights = () => {
             </div>
           )}
         </div>
-        <FormButton forwardref={forward} backwardref={backward} />
+        <FormButton />
       </form>
     </div>
   )

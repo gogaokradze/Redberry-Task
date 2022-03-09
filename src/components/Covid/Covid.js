@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useRef } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
 import FormButton from '../FormButton/FormButton'
@@ -24,17 +24,7 @@ const Covid = () => {
   const [startDate, setStartDate] = useState()
   const [startDate2, setStartDate2] = useState()
 
-  const forward = useRef(null)
-  const backward = useRef(null)
-
-  const keypress = e => {
-    if (e.keyCode === 39) forward.current.click()
-    if (e.keyCode === 37) backward.current.click()
-  }
-
   useEffect(() => {
-    window.addEventListener('keydown', keypress)
-
     return () => {
       setData({
         ...data,
@@ -44,7 +34,6 @@ const Covid = () => {
         vaccinated: getValues().vaccinated,
         vaccinated_at: startDate,
       })
-      window.removeEventListener('keydown', keypress)
     }
   }, [])
 
@@ -189,7 +178,7 @@ const Covid = () => {
               </div>
             )}
           </div>
-          <FormButton forwardref={forward} backwardref={backward} />
+          <FormButton />
         </form>
       </div>
     </>
