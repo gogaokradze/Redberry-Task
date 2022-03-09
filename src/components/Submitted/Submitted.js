@@ -10,7 +10,7 @@ const Submitted = ({ data, index, skills }) => {
   const [show, setShow] = useState(false)
   return (
     <div className={classes.main}>
-      <button className={classes.button} onClick={() => setShow((prevValue) => !prevValue)}>
+      <button className={show ? classes.button1 : classes.button} onClick={() => setShow((prevValue) => !prevValue)}>
         <div className={classes.buttondiv}>
           <span>{index + 1}</span>
           <span className={show ? classes.rotateup : classes.rotatedown}> &gt;</span>
@@ -39,8 +39,8 @@ const Submitted = ({ data, index, skills }) => {
           <div className={classes.skills}>
             <h1 className={classes.title}>Skillset</h1>
             {skills && data.skills.map(({ id, experience }, index) => (
-              <div className={classes.skillsdiv}>
-                <p key={index}>{skills.find((object) => object.id === id).title}:</p>
+              <div className={classes.skillsdiv} key={index}>
+                <p >{skills.find((object) => object.id === id).title}:</p>
                 <span className={classes.experience}>Years of Experience:&nbsp; {experience}</span>
               </div>
             ))}

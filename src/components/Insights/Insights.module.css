@@ -80,6 +80,10 @@
   height: 89px;
 }
 
+.formsize {
+  min-height: 55vh;
+}
+
 .errorMessage {
   margin-top: 1.5rem;
   font-family: Montserrat;
@@ -88,4 +92,16 @@
   font-size: 11px;
   line-height: 13px;
   color: #fe3b1f;
+}
+
+.h1 {
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 79px;
+  color: #fe3b1f;
+  width: 95%;
+  margin: 5rem auto 7rem auto;
+  text-align: center;
 }

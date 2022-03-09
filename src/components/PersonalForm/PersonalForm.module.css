@@ -20,3 +20,9 @@
   margin: 5rem auto 7rem auto;
   text-align: center;
 }
+
+.formsize {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4.8rem;
+}

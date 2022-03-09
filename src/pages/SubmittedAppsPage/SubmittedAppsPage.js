@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Submitted from '../../components/submitted/Submitted'
+import Submitted from '../../components/Submitted/Submitted'
 import classes from './SubmittedAppsPage.module.css'
 
 const SubmittedAppsPage = () => {

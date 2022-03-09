@@ -79,6 +79,13 @@
   border: none;
   margin-top: 2rem;
 }
+.button1 {
+  width: 100%;
+  height: 3rem;
+  background: #f05039;
+  border: none;
+  margin-top: 2rem;
+}
 
 .buttondiv {
   display: flex;
@@ -137,6 +144,6 @@
 
 .calendar {
   position: relative;
-  left: 270px;
+  left: 240px;
   bottom: 30px;
 }

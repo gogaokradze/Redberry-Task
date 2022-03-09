@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 import classes from './QuestionnairePage.module.css'
 
-import PersonalForm from '../components/firstformpage/PersonalForm'
-import RedberryOrigins from '../components/RedberryStories/RedberryStories'
-import SkillsForm from '../components/secondformpage/SkillsForm'
-import Covid from '../components/thirdformpage/Covid'
-import Insights from '../components/forthformpage/Insights'
-import SubmitPage from './SubmitPage/SubmitPage'
+import PersonalForm from '../../components/PersonalForm/PersonalForm'
+import RedberryOrigins from '../../components/RedberryStories/RedberryStories'
+import SkillsForm from '../../components/SkillsForm/SkillsForm'
+import Covid from '../../components/Covid/Covid'
+import Insights from '../../components/Insights/Insights'
+import SubmitPage from '../SubmitPage/SubmitPage'
 
-import { UserContext } from '../UserContext'
+import { UserContext } from '../../UserContext'
 
 
 const QuestionnairePage = () => {

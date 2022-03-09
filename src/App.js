@@ -9,7 +9,7 @@ import {
 import { UserContext } from './UserContext'
 
 import LandingPage from "./pages/LandingPage/LandingPage";
-import QuestionnairePage from "./pages/QuestionnairePage";
+import QuestionnairePage from "./pages/QuestionnairePage/QuestionnairePage";
 import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
 import SubmittedAppsPage from "./pages/SubmittedAppsPage/SubmittedAppsPage";
 

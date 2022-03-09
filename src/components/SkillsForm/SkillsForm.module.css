@@ -63,6 +63,7 @@
 
 .box {
   display: flex;
+  justify-content: space-around;
   width: 447px;
   height: 48px;
   box-sizing: border-box;
@@ -78,13 +79,32 @@
   font-size: 14px;
   line-height: 17px;
 }
-
+.title {
+  width: 15%;
+  margin-left: -1rem;
+}
 .years {
-  padding-left: 35px;
-  padding-right: 171px;
+  width: 40%;
+  margin-left: -2rem;
 }
 
 .remove {
   background: none;
   border: none;
+}
+
+.formsize {
+  min-height: 55vh;
+}
+
+.h1 {
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 79px;
+  color: #fe3b1f;
+  width: 95%;
+  margin: 5rem auto 7rem auto;
+  text-align: center;
 }

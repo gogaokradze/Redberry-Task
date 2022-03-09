@@ -12,9 +12,9 @@ const FormButton = (props) => {
   return (
     <div className={classes.tracker}>
       {props.previous ? (
-        <Link to="/"><Previous /></Link>
+        <Link to="/" ref={props.backwardref}><Previous /></Link>
       ) : (
-        <button className={classes.button} onClick={() => setFormIndex((prevState) => prevState -= 1)}>
+        <button className={classes.button} ref={props.backwardref} onClick={() => setFormIndex((prevState) => prevState -= 1)}>
           <Previous />
         </button>
       )}
@@ -25,14 +25,14 @@ const FormButton = (props) => {
       <Circle opacity={formIndex >= 3} />
       <Circle opacity={formIndex >= 4} />
       {props.next ? (
-        <button className={classes.button} onClick={() => {
+        <button ref={props.forwardref} className={classes.button} onClick={() => {
           if (data.skills.length > 0) {
             setFormIndex((prevState) => prevState += 1)
           }
         }
         }>
           <Next />
-        </button>) : (<button className={classes.button} type="submit">
+        </button>) : (<button ref={props.forwardref} className={classes.button} type="submit">
           <Next />
         </button>)
       }
